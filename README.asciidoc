@@ -1,0 +1,13 @@
+= HMC Math 174: Representation Theory (2019 Spring)
+
+Here's a repository containing LaTeX document templates for
+assignments (homeworks and critical readings) in Math 174.
+
+
+== LaTeX commands
+
+`\homework{1}` :: Set the document title to "`Homework 1`".
+`\criticalreading{1}` :: Set the document title to "`Critical Reading 1`".
+
+
+
