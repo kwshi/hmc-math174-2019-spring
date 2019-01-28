@@ -149,6 +149,7 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 
 %% special operators
 \DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\sgn}{sgn}
 
 %% common blackboard-bold symbols
 \newcommand{\ZZ}{\mathbb Z}
@@ -160,11 +161,13 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 \newcommand{\PP}{\mathbb P}
 \newcommand{\VV}{\mathbb V}
 
-% transpose and complement
+% special operators
 \newcommand{\T}{\mathsf{T}}
-\newcommand{\M}{\mathsf{M}}
 \newcommand{\C}{\mathsf{C}}
 \renewcommand{\complement}{\C}
+
+% special sets
+\newcommand{\Mat}{\mathrm{Mat}}
 
 %% differential operators
 \newcommand{\odif}{\mathop{}\! \mathrm d}
