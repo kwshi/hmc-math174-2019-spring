@@ -9,5 +9,24 @@ assignments (homeworks and critical readings) in Math 174.
 `\homework{1}` :: Set the document title to "`Homework 1`".
 `\criticalreading{1}` :: Set the document title to "`Critical Reading 1`".
 
+=== Math commands
+
+==== Blackboard-bold
+
+`\ZZ` :: ℤ
+`\RR` :: ℝ
+`\QQ` :: ℚ
+`\CC` :: ℂ
+`\KK` :: blackboard-bold K
+`\NN` :: ℕ
+`\PP` :: ℙ
+`\VV` :: blackboard-bold V
+
+==== Sans-serif special letters
+
+`\T` :: sans-serif T, used as a "matrix transpose" operator
+`\M` :: sans-serif M, used to denote spaces of matrices
+`\C` :: sans-serif C, used as a "set complement" operator
+`\complement` :: same as `\C`
 
 
