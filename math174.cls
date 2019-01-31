@@ -141,6 +141,10 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
   skipabove=1em,
 }
 
+% tikz libraries
+\usetikzlibrary{matrix}
+\usetikzlibrary{calc}
+
 % math commands
 
 %% vector and matrix bold fonts
@@ -150,6 +154,9 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 %% special operators
 \DeclareMathOperator{\inv}{inv}
 \DeclareMathOperator{\sgn}{sgn}
+
+%% miscellaneous relations
+\newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
 
 %% common blackboard-bold symbols
 \newcommand{\ZZ}{\mathbb Z}
