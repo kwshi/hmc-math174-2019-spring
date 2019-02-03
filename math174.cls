@@ -163,7 +163,10 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 
 % special operators
 \newcommand{\T}{\mathsf{T}}
-\newcommand{\C}{\mathsf{C}}
+\renewcommand{\C}{\mathsf{C}}
+\renewcommand{\G}{\mathsf{G}}
+\newcommand{\GL}{\mathsf{GL}}
+\newcommand{\SL}{\mathsf{SL}}
 \renewcommand{\complement}{\C}
 
 % special sets
