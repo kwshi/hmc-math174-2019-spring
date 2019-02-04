@@ -1,0 +1,1 @@
+/home/kshi/documents/coursework/2-sophomore/spring/hmc-math174/math174.cls
