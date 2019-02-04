@@ -67,7 +67,8 @@
 \newcommand{\homework}[1]{\title{Homework #1}}
 \newcommand{\criticalreading}[1]{
   \title{Critical Reading #1}
-  \setlist[enumerate, 1]{label=\arabic*.}
+  \setlist[enumerate, 1]{}
+  \setlist[description, 1]{}
 }
 
 \newcommand{\contents}[1]{\newcommand{\thecontents}{#1}}
@@ -189,8 +190,8 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 
 % special operators
 \newcommand{\T}{\mathsf{T}}
-\newcommand{\C}{\mathsf{C}}
-\renewcommand{\complement}{\C}
+\renewcommand{\complement}{\mathsf{C}}
+\DeclareMathOperator{\spn}{span}
 
 % special sets
 \newcommand{\Mat}{\mathrm{Mat}}
