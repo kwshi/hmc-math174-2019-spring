@@ -37,7 +37,6 @@
 \RequirePackage{hyperref}
 \RequirePackage{marginnote}
 \RequirePackage{isomath}
-\RequirePackage{nicematrix}
 \RequirePackage{centernot}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
@@ -65,7 +64,11 @@
 \newcommand{\coauthor}[1]{\renewcommand{\thecoauthor}{#1}}
 
 \newcommand{\homework}[1]{\title{Homework #1}}
-\newcommand{\criticalreading}[1]{\title{Critical Reading #1}}
+\newcommand{\criticalreading}[1]{
+  \title{Critical Reading #1}
+  \setlist[enumerate, 1]{}
+  \setlist[description, 1]{}
+}
 
 \newcommand{\contents}[1]{\newcommand{\thecontents}{#1}}
 \newcommand{\sections}[1]{\contents{\textsc{sections}: #1}}
@@ -93,6 +96,19 @@
 \pagestyle{math174}
 
 %% list styles
+\setlist[description, 1]{
+  labelwidth=1in,
+  align=right,
+  leftmargin=0pt,
+  labelsep=1em,
+  labelindent=!
+}
+\setlist[enumerate, 1]{
+  label=(\alph*),
+}
+\setlist[enumerate, 2]{
+  label=\roman*.,
+}
 
 %% hyperlink styles
 \hypersetup{
@@ -124,6 +140,8 @@
 
 % pset-related environments and commands
 
+%% old problem environment, kept for backwards-compatibility; new use
+%% description environment instead
 \declaretheoremstyle[
   spaceabove=1em,
   numbered=no,
@@ -134,12 +152,17 @@
 style=problem,
 postheadhook={\setlist[enumerate]{label=(\alph*)}},
 ]{problem}
+
 \newenvironment{solution}{\begin{mdframed}}{\end{mdframed}}
 
 % mdframed spacing settings
 \mdfsetup{
   skipabove=1em,
 }
+
+% tikz libraries
+\usetikzlibrary{matrix}
+\usetikzlibrary{calc}
 
 % math commands
 
@@ -150,6 +173,9 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 %% special operators
 \DeclareMathOperator{\inv}{inv}
 \DeclareMathOperator{\sgn}{sgn}
+
+%% miscellaneous relations
+\newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
 
 %% common blackboard-bold symbols
 \newcommand{\ZZ}{\mathbb Z}
@@ -162,15 +188,15 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 \newcommand{\VV}{\mathbb V}
 
 % special operators
-\newcommand{\T}{\mathsf{T}}
-\renewcommand{\C}{\mathsf{C}}
-\renewcommand{\G}{\mathsf{G}}
+\newcommand{\transpose}{\intercal}
 \newcommand{\GL}{\mathsf{GL}}
 \newcommand{\SL}{\mathsf{SL}}
-\renewcommand{\complement}{\C}
+\renewcommand{\complement}{\mathsf{C}}
+\DeclareMathOperator{\spn}{span}
 
 % special sets
 \newcommand{\Mat}{\mathrm{Mat}}
+\newcommand{\Sgroup}{\mathcal S}
 
 %% differential operators
 \newcommand{\odif}{\mathop{}\! \mathrm d}

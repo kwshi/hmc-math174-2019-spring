@@ -1,1 +1,1 @@
-math174.cls
+../../math174.cls
