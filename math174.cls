@@ -27,6 +27,9 @@
 }
 \RequirePackage{mathtools, thmtools}
 
+%% symbols
+\RequirePackage{stmaryrd}
+
 %% utility packages
 \RequirePackage{mdframed}
 \RequirePackage{cancel}
@@ -37,7 +40,6 @@
 \RequirePackage{hyperref}
 \RequirePackage{marginnote}
 \RequirePackage{isomath}
-\RequirePackage{nicematrix}
 \RequirePackage{centernot}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
