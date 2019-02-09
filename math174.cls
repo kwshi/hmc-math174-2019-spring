@@ -164,12 +164,18 @@ style=problem,
 postheadhook={\setlist[enumerate]{label=(\alph*)}},
 ]{problem}
 
-\newenvironment{solution}{\begin{mdframed}}{\end{mdframed}}
-
 % mdframed spacing settings
-\mdfsetup{
+\mdfdefinestyle{solution}{
   skipabove=1em,
 }
+\mdfdefinestyle{book}{
+  skipabove=1em,
+  backgroundcolor=lightgray!25,
+  hidealllines=true,
+}
+
+\newmdenv[style=solution]{solution}
+\newmdenv[style=book]{book}
 
 % tikz libraries
 \usetikzlibrary{matrix}
