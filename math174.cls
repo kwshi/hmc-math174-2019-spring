@@ -73,11 +73,10 @@
 
 \newcommand{\thesections}{}
 \newcommand{\theproblems}{}
-\newcommand{\thecontents}{{\textsc{sections}: \thesections}\qquad
-  {\textsc{problems}: \theproblems}}
+\newcommand{\thecontents}{\thesections\theproblems}
 
-\newcommand{\sections}[1]{\renewcommand{\thesections}{#1}}
-\newcommand{\problems}[1]{\renewcommand{\theproblems}{#1}}
+\newcommand{\sections}[1]{\renewcommand{\thesections}{\textsc{sections}: #1\qquad}}
+\newcommand{\problems}[1]{\renewcommand{\theproblems}{\textsc{problems}: #1}}
 \newcommand{\contents}[1]{\renewcommand{\thecontents}{#1}}
 
 
