@@ -69,13 +69,17 @@
 \newcommand{\homework}[1]{\title{Homework #1}}
 \newcommand{\criticalreading}[1]{
   \title{Critical Reading #1}
-  \setlist[enumerate, 1]{}
-  \setlist[description, 1]{}
 }
 
-\newcommand{\contents}[1]{\newcommand{\thecontents}{#1}}
-\newcommand{\sections}[1]{\contents{\textsc{sections}: #1}}
-\newcommand{\problems}[1]{\contents{\textsc{problems}: #1}}
+\newcommand{\thesections}{}
+\newcommand{\theproblems}{}
+\newcommand{\thecontents}{{\textsc{sections}: \thesections}\qquad
+  {\textsc{problems}: \theproblems}}
+
+\newcommand{\sections}[1]{\renewcommand{\thesections}{#1}}
+\newcommand{\problems}[1]{\renewcommand{\theproblems}{#1}}
+\newcommand{\contents}[1]{\renewcommand{\thecontents}{#1}}
+
 
 %% page decoration
 \fancypagestyle{math174}{
@@ -111,6 +115,11 @@
 }
 \setlist[enumerate, 2]{
   label=\roman*.,
+}
+
+\newcommand{\plainliststyles}{
+  \setlist[description]{}
+  \setlist[enumerate]{}
 }
 
 %% hyperlink styles
