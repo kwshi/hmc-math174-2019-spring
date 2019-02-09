@@ -205,7 +205,9 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 \newcommand{\VV}{\mathbb V}
 
 % special operators
-\newcommand{\T}{\mathsf{T}}
+\newcommand{\transpose}{\intercal}
+\newcommand{\GL}{\mathsf{GL}}
+\newcommand{\SL}{\mathsf{SL}}
 \renewcommand{\complement}{\mathsf{C}}
 \DeclareMathOperator{\spn}{span}
 
