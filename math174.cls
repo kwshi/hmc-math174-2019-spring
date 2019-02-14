@@ -117,8 +117,14 @@
 }
 
 \newcommand{\plainliststyles}{
-  \setlist[description]{}
-  \setlist[enumerate]{}
+  \setlist[description, 1]{}
+  \setlist[enumerate, 1]{
+    align=right,
+    leftmargin=0pt,
+    labelsep=1em,
+    label=(\arabic*),
+  }
+  \setlist[enumerate, 2]{}
 }
 
 %% hyperlink styles
@@ -166,7 +172,7 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 
 % mdframed spacing settings
 \mdfdefinestyle{solution}{
-  skipabove=1em,
+  skipabove=.5em,
 }
 \mdfdefinestyle{book}{
   skipabove=1em,
