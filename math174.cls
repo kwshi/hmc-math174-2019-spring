@@ -195,6 +195,7 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 
 %% special operators
 \DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\sgn}{sgn}
 
 %% miscellaneous relations
