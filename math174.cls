@@ -197,6 +197,8 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 \DeclareMathOperator{\inv}{inv}
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\trace}{tr}
 
 %% miscellaneous relations
 \newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
