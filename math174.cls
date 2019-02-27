@@ -183,6 +183,24 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 \newmdenv[style=solution]{solution}
 \newmdenv[style=book]{book}
 
+% iff proof environments
+\newcommand*{\iffenum}[1]{\expandafter\@iffenum\csname c@#1\endcsname}
+\newcommand*{\@iffenum}[1]
+{\ifcase#1\or{\(\implies\)}\or{\(\impliedby\)}\else\@ctrerr\fi}
+
+\newcommand*{\subsetenum}[1]{\expandafter\@subsetenum\csname c@#1\endcsname}
+\newcommand*{\@subsetenum}[1]
+{\ifcase#1\or{\(\subset\)}\or{\(\supset\)}\else\@ctrerr\fi}
+
+\AddEnumerateCounter{\iffenum}{\@iffenum}{\(\implies\)}
+\AddEnumerateCounter{\subsetenum}{\@subsetenum}{\(\subset\)}
+
+\newlist{iffproof}{enumerate}{1}
+\setlist[iffproof]{label=\iffenum*, leftmargin=2.5em}
+
+\newlist{seteqproof}{enumerate}{1}
+\setlist[seteqproof]{label=\subsetenum*}
+
 % tikz libraries
 \usetikzlibrary{matrix}
 \usetikzlibrary{calc}
