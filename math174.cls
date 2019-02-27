@@ -102,7 +102,8 @@
 \pagestyle{math174}
 
 %% list styles
-\setlist[description, 1]{
+\newlist{problemlist}{description}{5}
+\setlist[problemlist, 1]{
   labelwidth=1in,
   align=right,
   leftmargin=0pt,
@@ -117,7 +118,6 @@
 }
 
 \newcommand{\plainliststyles}{
-  \setlist[description, 1]{}
   \setlist[enumerate, 1]{
     align=right,
     leftmargin=0pt,
