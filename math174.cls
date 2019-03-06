@@ -217,6 +217,7 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\trace}{tr}
+\newcommand{\innertensor}{\mathbin{\hat\otimes}}
 
 %% miscellaneous relations
 \newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
