@@ -32,6 +32,7 @@
 
 %% utility packages
 \RequirePackage{mdframed}
+\RequirePackage{booktabs}
 \RequirePackage{cancel}
 \RequirePackage{lastpage}
 \RequirePackage{multicol}
