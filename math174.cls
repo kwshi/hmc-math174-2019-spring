@@ -29,6 +29,7 @@
 
 %% symbols
 \RequirePackage{stmaryrd}
+\RequirePackage{wasysym}
 
 %% utility packages
 \RequirePackage{mdframed}
@@ -117,6 +118,9 @@
 \setlist[enumerate, 2]{
   label=\roman*.,
 }
+\setlist[enumerate, 3]{
+  label=\Alph*.,
+}
 
 \newcommand{\plainliststyles}{
   \setlist[enumerate, 1]{
@@ -187,20 +191,20 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 % iff proof environments
 \newcommand*{\iffenum}[1]{\expandafter\@iffenum\csname c@#1\endcsname}
 \newcommand*{\@iffenum}[1]
-{\ifcase#1\or{\(\implies\)}\or{\(\impliedby\)}\else\@ctrerr\fi}
+{\ifcase#1\or{\(\Rightarrow\)}\or{\(\Leftarrow\)}\else\@ctrerr\fi}
 
 \newcommand*{\subsetenum}[1]{\expandafter\@subsetenum\csname c@#1\endcsname}
 \newcommand*{\@subsetenum}[1]
 {\ifcase#1\or{\(\subset\)}\or{\(\supset\)}\else\@ctrerr\fi}
 
-\AddEnumerateCounter{\iffenum}{\@iffenum}{\(\implies\)}
+\AddEnumerateCounter{\iffenum}{\@iffenum}{\(\Rightarrow\)}
 \AddEnumerateCounter{\subsetenum}{\@subsetenum}{\(\subset\)}
 
 \newlist{iffproof}{enumerate}{1}
-\setlist[iffproof]{label=\iffenum*, leftmargin=2.5em}
+\setlist[iffproof]{label=(\iffenum*), leftmargin=3em}
 
 \newlist{seteqproof}{enumerate}{1}
-\setlist[seteqproof]{label=\subsetenum*}
+\setlist[seteqproof]{label=(\subsetenum*)}
 
 % tikz libraries
 \usetikzlibrary{matrix}
