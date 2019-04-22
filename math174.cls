@@ -204,7 +204,7 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 \setlist[iffproof]{label=(\iffenum*), leftmargin=3em}
 
 \newlist{seteqproof}{enumerate}{1}
-\setlist[seteqproof]{label=(\subsetenum*)}
+\setlist[seteqproof]{label=(\subsetenum*), leftmargin=2.5em}
 
 % tikz libraries
 \usetikzlibrary{matrix}
@@ -242,7 +242,9 @@ postheadhook={\setlist[enumerate]{label=(\alph*)}},
 \newcommand{\GL}{\mathsf{GL}}
 \newcommand{\SL}{\mathsf{SL}}
 \renewcommand{\complement}{\mathsf{C}}
-\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator*{\spn}{span}
+\DeclareMathOperator*{\lspan}{span}
+\DeclareMathOperator*{\vecspan}{span}
 
 % special sets
 \newcommand{\Mat}{\mathrm{Mat}}
